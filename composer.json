@@ -1,0 +1,37 @@
+{
+    "name": "enaxon/reqtide-redis",
+    "description": "Redis state backends for Reqtide: shared rate limits, circuit breakers, bulkheads, retry budgets and cooldowns. Work in progress, not released.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["rate-limit", "circuit-breaker", "retry", "redis", "predis", "resilience", "bulkhead"],
+    "homepage": "https://github.com/ehsanenaloo/reqtide",
+    "authors": [
+        { "name": "Ehsan Enaloo", "homepage": "https://github.com/ehsanenaloo" }
+    ],
+    "support": {
+        "issues": "https://github.com/ehsanenaloo/reqtide/issues",
+        "source": "https://github.com/ehsanenaloo/reqtide",
+        "docs": "https://github.com/ehsanenaloo/reqtide/tree/main/docs",
+        "security": "https://github.com/ehsanenaloo/reqtide/security/policy"
+    },
+    "require": {
+        "php": ">=8.3",
+        "ext-openssl": "*",
+        "predis/predis": "^3.7",
+        "enaxon/reqtide": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "Enaxon\\Reqtide\\Redis\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Enaxon\\Reqtide\\Redis\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}

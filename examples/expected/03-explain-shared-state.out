@@ -1,0 +1,21 @@
+profile: explain-shared v1
+enabled policies: attempt, retry(maxAttempts=1), rate_limit, concurrency
+  invocation=synchronous
+  settlement=inline_return_or_throw
+  attempt_timeout=unsupported
+  cancellation=checkpoint_only
+  scheduling=bounded_blocking
+  queue_ownership=none
+  detached_completion=unsupported
+  nonblocking=not_claimed
+  physical_stop=not_guaranteed
+  require_finite_backend_io=false
+  state_scope=shared_authority
+  state_clock=redis_server
+  state_io_timeout_seconds=1.5
+  state_tls=false
+  registry_identity=example-explain
+  registry_schema=1
+  registry_max_partitions=500
+  registry_max_records=900
+ok

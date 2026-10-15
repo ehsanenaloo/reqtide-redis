@@ -1,0 +1,7 @@
+call 1 via A: served
+call 2 via B: served
+call 3 via A: served
+call 4 via B: refused (rate.exhausted)
+call 5 via A: refused (rate.exhausted)
+served by A: 2, served by B: 1
+ok
